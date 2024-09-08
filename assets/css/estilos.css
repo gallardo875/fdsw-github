@@ -1,5 +1,6 @@
+/* se cambia el tipo de letra de RALEWAY a POPPINS MONTSERRAT */
 body {
-  font-family: "Raleway", sans-serif;
+  font-family: "Poppins", "Montserrat", sans-serif;
 }
 
 /* Hero Section */
