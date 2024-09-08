@@ -1,49 +1,69 @@
-/* se cambia el tipo de letra de RALEWAY a POPPINS MONTSERRAT */
+/* Se cambia el tipo de letra de RALEWAY a POPPINS MONTSERRAT */
 body {
-  font-family: "Poppins", "Montserrat", sans-serif;
+  font-family: "Poppins", "Montserrat", sans-serif; /* Fuentes mejoradas para un estilo moderno y limpio */
+  line-height: 1.6; /* Mejora de la legibilidad del texto */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Asegura que el padding y borde estén dentro del tamaño del elemento */
 }
 
-/* Hero Section */
-
+/* Sección Hero */
 #Hero-Section {
-  background-image: url("../img/bg-hero.jpg");
+  background-image: url("../img/bg-hero.jpg"); /* Imagen de fondo para la sección de introducción */
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: left;
+  background-size: cover; /* Asegura que la imagen cubra toda el área */
+  background-position: left; /* Ajuste de posición de la imagen */
+  min-height: 100vh; /* Altura mínima para ocupar toda la pantalla */
+  display: flex; /* Centrado vertical y horizontal */
+  align-items: center;
+  justify-content: center;
+  color: #fff; /* Color de texto claro sobre fondo oscuro */
+  text-align: center; /* Texto centrado */
 }
 
-/* Mis trabajos */
-
+/* Sección de Trabajos */
 #Mis-trabajos .image-top {
-  height: 250px;
+  height: 250px; /* Altura fija para consistencia visual */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  border-radius: 8px; /* Añade bordes redondeados para suavizar la imagen */
+  transition: transform 0.3s ease; /* Transición suave para la animación */
 }
 
-/* Contacto */
+#Mis-trabajos .image-top:hover {
+  transform: scale(1.05); /* Efecto de zoom al pasar el ratón */
+}
 
+/* Sección de Contacto */
 #Contacto {
-  margin-top: 40px;
+  margin-top: 4rem; /* Espaciado superior para separar la sección */
+  padding: 2rem; /* Espaciado interior */
+  background-color: #f9f9f9; /* Fondo claro para distinguir la sección */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para destacar */
 }
 
 /* Estilo del formulario */
 #Contacto form label {
-  font-weight: 700; /* Fuente negrita para etiquetas */
-  color: #373a3c;
+  font-weight: 700; /* Fuente en negrita para mayor claridad */
+  color: #373a3c; /* Color consistente con la paleta de diseño */
+  display: block; /* Asegura que las etiquetas estén en su propia línea */
+  margin-bottom: 0.5rem; /* Espaciado inferior para separación */
 }
 
 #Contacto form .form-control {
-  border-radius: 10px; /* Bordes redondeados */
+  border-radius: 0.5rem; /* Bordes redondeados */
   border: 1px solid #ced4da; /* Borde sutil */
-  padding: 15px; /* Padding interno para mayor espacio */
-  margin-bottom: 20px; /* Espacio inferior entre campos */
-  transition: border-color 0.3s ease; /* Transición suave para los bordes */
+  padding: 0.75rem; /* Padding interno */
+  margin-bottom: 1rem; /* Espacio inferior entre campos */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves para los bordes y sombras */
 }
 
 #Contacto form .form-control:focus {
   border-color: #17a2b8; /* Color de borde al hacer foco */
   box-shadow: 0 0 5px rgba(23, 162, 184, 0.5); /* Sombra al hacer foco */
+  outline: none; /* Quita el borde de enfoque predeterminado del navegador */
 }
 
 /* Estilo del botón */
@@ -51,27 +71,30 @@ body {
   background-color: #17a2b8; /* Color de fondo del botón */
   border: none; /* Sin bordes */
   border-radius: 50px; /* Botón redondeado */
-  padding: 12px 40px; /* Tamaño del botón */
+  padding: 0.75rem 2.5rem; /* Tamaño del botón */
+  color: #fff; /* Color del texto */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
   transition: background-color 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
 }
 
-#Contacto .btn-info:hover {
+#Contacto .btn-info:hover,
+#Contacto .btn-info:focus {
   background-color: #138496; /* Efecto hover del botón */
-  transform: scale(1.05); /* Aumenta ligeramente el tamaño del botón al pasar el mouse */
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño del botón al pasar el ratón */
 }
 
-/* Media query para pantallas más pequeñas */
+/* Media Query para pantallas más pequeñas */
 @media (max-width: 768px) {
-  #Contacto form label {
-    font-weight: 400; /* Fuente regular en pantallas más pequeñas */
+  #Contacto {
+    padding: 1rem; /* Reduce el padding en pantallas más pequeñas */
   }
 
   .navbar-brand {
-    width: 100px;
+    width: 100px; /* Ajuste de tamaño del logo */
   }
 
-  #Contacto {
-    padding: 20px; /* Reduce el padding en pantallas más pequeñas */
+  #Contacto form label {
+    font-weight: 400; /* Fuente regular en pantallas más pequeñas */
   }
 }
 
@@ -79,13 +102,13 @@ body {
 .contact-card {
   background: #f8f9fa; /* Fondo claro */
   border-radius: 15px; /* Bordes redondeados */
-  padding: 40px; /* Espacio interno */
+  padding: 2.5rem; /* Espacio interno */
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animaciones suaves */
 }
 
 .contact-card:hover {
-  transform: translateY(-10px); /* Efecto de elevación al pasar el mouse */
+  transform: translateY(-10px); /* Efecto de elevación al pasar el ratón */
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15); /* Sombra más profunda */
 }
 
@@ -94,12 +117,14 @@ body {
   background: linear-gradient(135deg, #1c1c1c, #343a40); /* Gradiente de fondo */
   border-top: 4px solid #ff6f61; /* Línea de color personalizada en la parte superior */
   box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.5); /* Sombra suave para dar profundidad */
+  padding: 1rem 0; /* Espaciado del contenido del footer */
 }
 
 .footer-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap; /* Permite que el contenido se ajuste en pantallas pequeñas */
 }
 
 .footer p {
@@ -124,7 +149,7 @@ body {
 }
 
 .navbar-brand img {
-  height: 40px; /* Altura del logo */
+  height: 2.5rem; /* Altura del logo */
   transition: transform 0.3s ease; /* Transición suave para el logo */
 }
 
@@ -135,7 +160,7 @@ body {
 /* Estilos de enlaces de navegación */
 .navbar-nav .nav-link {
   color: #f8f9fa; /* Color de texto */
-  margin: 0 15px; /* Espaciado entre enlaces */
+  margin: 0 1rem; /* Espaciado entre enlaces */
   position: relative; /* Para efecto de subrayado */
   transition: color 0.3s ease; /* Transición de color */
 }
@@ -152,10 +177,6 @@ body {
   left: 0;
 }
 
-.navbar-nav .nav-link:hover {
-  color: #17a2b8; /* Color de texto al hacer hover */
-}
-
 .navbar-nav .nav-link:hover::after {
   width: 100%; /* Subrayado completo al hacer hover */
 }
@@ -165,5 +186,4 @@ body {
 }
 
 .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%280, 123, 255, 0.5%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); /* Personalizar icono del botón */
-}
+  background-image: url("data:image/svg+xml;charset=utf
