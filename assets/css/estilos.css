@@ -23,18 +23,147 @@ body {
 
 /* Contacto */
 
+#Contacto {
+  margin-top: 40px;
+}
+
+/* Estilo del formulario */
 #Contacto form label {
-  font-weight: 700;
+  font-weight: 700; /* Fuente negrita para etiquetas */
   color: #373a3c;
 }
 
+#Contacto form .form-control {
+  border-radius: 10px; /* Bordes redondeados */
+  border: 1px solid #ced4da; /* Borde sutil */
+  padding: 15px; /* Padding interno para mayor espacio */
+  margin-bottom: 20px; /* Espacio inferior entre campos */
+  transition: border-color 0.3s ease; /* Transición suave para los bordes */
+}
+
+#Contacto form .form-control:focus {
+  border-color: #17a2b8; /* Color de borde al hacer foco */
+  box-shadow: 0 0 5px rgba(23, 162, 184, 0.5); /* Sombra al hacer foco */
+}
+
+/* Estilo del botón */
+#Contacto .btn-info {
+  background-color: #17a2b8; /* Color de fondo del botón */
+  border: none; /* Sin bordes */
+  border-radius: 50px; /* Botón redondeado */
+  padding: 12px 40px; /* Tamaño del botón */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+}
+
+#Contacto .btn-info:hover {
+  background-color: #138496; /* Efecto hover del botón */
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño del botón al pasar el mouse */
+}
+
+/* Media query para pantallas más pequeñas */
 @media (max-width: 768px) {
   #Contacto form label {
-    font-weight: 400;
+    font-weight: 400; /* Fuente regular en pantallas más pequeñas */
   }
 
-  .navbar-brand{
+  .navbar-brand {
     width: 100px;
   }
 
+  #Contacto {
+    padding: 20px; /* Reduce el padding en pantallas más pequeñas */
+  }
+}
+
+/* Estilo de la tarjeta de contacto */
+.contact-card {
+  background: #f8f9fa; /* Fondo claro */
+  border-radius: 15px; /* Bordes redondeados */
+  padding: 40px; /* Espacio interno */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animaciones suaves */
+}
+
+.contact-card:hover {
+  transform: translateY(-10px); /* Efecto de elevación al pasar el mouse */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15); /* Sombra más profunda */
+}
+
+/* Estilo del footer */
+.footer {
+  background: linear-gradient(135deg, #1c1c1c, #343a40); /* Gradiente de fondo */
+  border-top: 4px solid #ff6f61; /* Línea de color personalizada en la parte superior */
+  box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.5); /* Sombra suave para dar profundidad */
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 0.9rem; /* Tamaño de fuente ajustado */
+}
+
+.social-icons a {
+  font-size: 1.5rem; /* Tamaño de los iconos */
+  transition: color 0.3s ease; /* Transición suave para los iconos */
+}
+
+.social-icons a:hover {
+  color: #ff6f61; /* Efecto hover en los iconos */
+}
+
+/* Estilos para la barra de navegación */
+.navbar {
+  background: linear-gradient(135deg, #343a40, #212529); /* Gradiente de fondo para un look moderno */
+  padding: 1rem 1rem; /* Espaciado */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+.navbar-brand img {
+  height: 40px; /* Altura del logo */
+  transition: transform 0.3s ease; /* Transición suave para el logo */
+}
+
+.navbar-brand img:hover {
+  transform: scale(1.1); /* Efecto hover de zoom para el logo */
+}
+
+/* Estilos de enlaces de navegación */
+.navbar-nav .nav-link {
+  color: #f8f9fa; /* Color de texto */
+  margin: 0 15px; /* Espaciado entre enlaces */
+  position: relative; /* Para efecto de subrayado */
+  transition: color 0.3s ease; /* Transición de color */
+}
+
+.navbar-nav .nav-link::after {
+  content: ''; /* Línea de subrayado animada */
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #17a2b8; /* Color de subrayado */
+  transition: width 0.3s ease; /* Transición de subrayado */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #17a2b8; /* Color de texto al hacer hover */
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%; /* Subrayado completo al hacer hover */
+}
+
+.navbar-toggler {
+  border: none; /* Quitar borde del botón */
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%280, 123, 255, 0.5%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); /* Personalizar icono del botón */
 }
